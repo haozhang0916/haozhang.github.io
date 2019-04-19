@@ -45,8 +45,8 @@ let loadingRender=(function(){
                 callback&&callback();
                 return;
             }
-            alert('网络状态不佳！请重试');
-            // window.location.href='https://www.baidu.com/';/*十秒加载不完则跳转到其他页面。*/
+            alert('网络状态不佳！ 将跳转到百度。请您稍后重试');
+            window.location.href='https://www.baidu.com/';/*十秒加载不完则跳转到其他页面。*/
         },10000);
     };
 
