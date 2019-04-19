@@ -63,7 +63,6 @@ let loadingRender=(function(){
             $loadingBox.css('display','block');
             run(done);
             Maxdalay(done);
-            console.dir($loadingBox);
         }
     }
 }
@@ -131,7 +130,6 @@ let phoneRender=(function(){
         init:  function(){
             $phoneBox.css('display', 'block');
             //第一件事播放bell
-            console.log(2222, answerBell);
             // $(document).ready(answerBell.play());
             $answerMark.tap(answerMarkTouch);
             $hangupMark.tap(closePhone);
@@ -162,7 +160,6 @@ let messageRender=(function(){
         };
         let $cur=$messageList.eq(step);
         $cur.addClass('active');
-        console.log($cur);
         // if (step >= 3) {
         //     //=>展示的条数已经是四条或者四条以上了,此时我们让WRAPPER向上移动(移动的距离是新展示这一条的高度)
         //     /*let curH = $cur[0].offsetHeight,
@@ -183,19 +180,16 @@ let messageRender=(function(){
     let handSend=function handSend(){
         $keyBoard.css('transform','translateY(0rem)').on('transitionend',()=>{
             //transitionen监听当前元素动画结束。特点：有几个样式属性改变，并执行了过度效果，时间就会被触发执行几次
-            console.log(1);
             let str = '好的，马上介绍！',
                 n = -1,
                 textTimer = null;
             textTimer = setInterval(() => {
-                console.log(1);
                 let orginHTML = $textInp.html();
                 $textInp.html(orginHTML + str[++n]);
                 if (n >= str.length - 1) {
                     //=>文字显示完成
                     clearInterval(textTimer);
                     $submit.css('display', 'block');
-                    console.log($submit);
                 }
             }, 100);
         });
@@ -215,7 +209,6 @@ let messageRender=(function(){
         // $textInp.html('');
         autoTimer = setInterval(showMessage, interval);
         //=>该消失的消失
-        console.log($textInp);
         $submit.css('display', 'none');
         $keyBoard.css('transform', 'translateY(3.7rem)');
     };
@@ -257,7 +250,6 @@ let cubeRender=(function cubeRender(){
      //=>手指控住旋转
      let start = function start(ev) {
         //=>记录手指按在位置的起始坐标
-        console.log(ev);
         let point = ev.changedTouches[0];
         this.strX = point.clientX;
         this.strY = point.clientY;
@@ -299,8 +291,6 @@ let cubeRender=(function cubeRender(){
     return{
         init:function(){
            $cubeBox.css('display','block');
-           console.log($cube);
-           console.log($cube[0]);
             //手指操作cube，让cube旋转
 
              //=>手指操作CUBE,让CUBE跟着旋转
@@ -393,7 +383,6 @@ $(document).on('touchstart touchmove touchend', (ev) => {
     let url=window.location.href,//获取当前页面的url location .href='XXX'是让其跳转的某个页面
         well=url.indexOf('#'),
         hash=well===-1?null:url.substr(well+1);
-    console.log(hash);
     switch(hash){
     case 'loading':
         loadingRender.init();
