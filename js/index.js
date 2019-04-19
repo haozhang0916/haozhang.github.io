@@ -324,7 +324,6 @@ let detailRender = (function () {
                function(){
                 $detailBox.css('display','none');
                 cubeRender.init(); 
-                console.log(111);
             }  
             )
         });
@@ -376,7 +375,6 @@ let detailRender = (function () {
                 swiperInit();
             }
             swiper.slideTo(index, 0);//=>直接运动到具体的SLIDE页面(第二个参数是切换的速度：0立即切换没有切换的动画效果)
-            console.log($backList);
         }
     }
 })();
