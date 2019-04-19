@@ -149,7 +149,7 @@ let messageRender=(function(){
     let total=$messageList.length+1;/*自己好要发一条*/
     let autoTimer=null;//计时器
     let interval=2000;//记录信息出现的时间
-
+    let tt=0;
     let showMessage=function showMessage(){
         ++step;
         //如果到第二条后，让键盘出来，显示手动发送
@@ -160,16 +160,16 @@ let messageRender=(function(){
         };
         let $cur=$messageList.eq(step);
         $cur.addClass('active');
-        // if (step >= 3) {
-        //     //=>展示的条数已经是四条或者四条以上了,此时我们让WRAPPER向上移动(移动的距离是新展示这一条的高度)
-        //     /*let curH = $cur[0].offsetHeight,
-        //         wraT = parseFloat($wrapper.css('top'));
-        //     $wrapper.css('top', wraT - curH);*/
-        //     //=>JS中基于CSS获取TRANSFORM，得到的结果是一个矩阵
-        //     let curH = $cur[0].offsetHeight;
-        //     tt -= curH;
-        //     $wrapper.css('transform', `translateY(${tt}px)`);
-        // }
+        if (step >= 3) {
+            //=>展示的条数已经是四条或者四条以上了,此时我们让WRAPPER向上移动(移动的距离是新展示这一条的高度)
+            // let curH = $cur[0].offsetHeight,
+            //     wraT = parseFloat($wrapper.css('top'));
+            // $wrapper.css('top', wraT - curH);
+            //=>JS中基于CSS获取TRANSFORM，得到的结果是一个矩阵
+            let curH = $cur[0].offsetHeight;
+            tt -= curH;
+            $wrapper.css('transform', `translateY(${tt}px)`);
+        }
         if (step >= total - 1) {
             //=>展示完了
             clearInterval(autoTimer);
@@ -180,7 +180,7 @@ let messageRender=(function(){
     let handSend=function handSend(){
         $keyBoard.css('transform','translateY(0rem)').on('transitionend',()=>{
             //transitionen监听当前元素动画结束。特点：有几个样式属性改变，并执行了过度效果，时间就会被触发执行几次
-            let str = '好的，马上介绍！',
+            let str = '好的，马上 开始自我介绍！',
                 n = -1,
                 textTimer = null;
             textTimer = setInterval(() => {
@@ -276,7 +276,7 @@ let cubeRender=(function cubeRender(){
             //2.上下滑=>CHANGE-Y=>ROTATE-X (反比:CHANGE越大ROTATE越小)
             //3.为了让每一次操作旋转角度小一点，我们可以把移动距离的1/3作为旋转的角度即可
             rotateX = rotateX - changeY / 3;
-            rotateY = rotateY - changeX / 3;
+            rotateY = rotateY + changeX / 3;
             //=>赋值给魔方盒子
             $(this).css('transform', `scale(0.6) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`);
             //=>让当前旋转的角度成为下一次起始的角度
@@ -315,8 +315,19 @@ let cubeRender=(function cubeRender(){
 //detail区域
 let detailRender = (function () {
     let $detailBox = $('.detailBox'),
+        $backList =$('.back'),
         swiper = null,
         $dl = $('.page1>dl');
+
+        $backList.forEach((item)=>{
+            $(item).tap(
+               function(){
+                $detailBox.css('display','none');
+                cubeRender.init(); 
+                console.log(111);
+            }  
+            )
+        });
 
     let swiperInit = function swiperInit() {
         swiper = new Swiper('.swiper-container', {
@@ -325,7 +336,6 @@ let detailRender = (function () {
             onTransitionEnd: move
         });
     };
-
     let move = function move(swiper) {
         //=>SWIPER:当前创建的实例
         //1.判断当前是否为第一个SLIDE:如果是让3D菜单展开,不是收起3D菜单
@@ -366,6 +376,7 @@ let detailRender = (function () {
                 swiperInit();
             }
             swiper.slideTo(index, 0);//=>直接运动到具体的SLIDE页面(第二个参数是切换的速度：0立即切换没有切换的动画效果)
+            console.log($backList);
         }
     }
 })();

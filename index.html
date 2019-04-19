@@ -7,11 +7,11 @@
     <meta name="keywords" content="个人简历">
     <meta name="description" content="自制个人简历">
     <title>个人简历</title>
-    <!-- <link rel="stylesheet/less" type="text/less" href="./css/index.less"> -->
+    <link rel="stylesheet/less" type="text/less" href="./css/index.less">
     <link rel="stylesheet" type="text/css" href="./css/swiper-3.4.2.min.css">
-    <link rel="stylesheet" href="./css/index.min.css">
+    <!-- <link rel="stylesheet" href="./css/index.min.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css"> -->
-    <!-- <script src="js/less-2.5.3.min.js"></script> -->
+    <script src="js/less-2.5.3.min.js"></script>
     <script src="js/prefixfree.min.js"></script><!--增加前缀-->
 </head>
 <body>
@@ -22,7 +22,7 @@
         <!-- loading区域 -->
         <section class="loadingBox">
             <div class="title">
-                <h1>珠峰简历</h1>
+                <h1>个人简历</h1>
                 <h2>H5交互场景简历</h2>
             </div>
             <div class="progress">
@@ -57,28 +57,39 @@
                 <li class="self">
                     <i class="arrow"></i>
                     <img src="img/zf_messageStudent.png" alt="hahh" class="pic">
-                     大家好！hahhahahahhahahahahhahahah
+                     你好！很高兴收到贵公司来电。
                 </li>
                 <li class="inter">
                     <i class="arrow"></i>
                     <img src="img/zf_messageLogo.png" alt="hah" class="pic">
-                     大家好！hhahahahhahahahha
+                     你好！请简要自我介绍一下吧！
                 </li> 
+                <li class="self">
+                    <i class="arrow"></i>
+                    <img src="img/zf_messageStudent.png" alt="hah" class="pic">
+                     我叫张浩，毕业于北京邮电大学信息工程专业。
+                </li>
+                <li class="self">
+                    <i class="arrow"></i>
+                    <img src="img/zf_messageStudent.png" alt="hah" class="pic">
+                     掌握JS，java和c++语言，能够熟练进行可以快速进行页面构建，对web语义化有一定理解，
+                     可以快速利用原生代码开发开发业务逻辑。同时对webpack、React和Node.js有一定的了解。
+                </li>
+                <li class="self">
+                    <i class="arrow"></i>
+                    <img src="img/zf_messageStudent.png" alt="hahh" class="pic">
+                     开发过一些项目，具有一定的项目经验。
+                </li>
+                <li class="self">
+                    <i class="arrow"></i>
+                    <img src="img/zf_messageStudent.png" alt="hahh" class="pic">
+                     接下来我将进行详细的介绍，请稍后。
+                </li>
                 <li class="inter">
                     <i class="arrow"></i>
                     <img src="img/zf_messageLogo.png" alt="hah" class="pic">
-                     大家好！hhahahahhahahahha
-                </li>
-                <li class="self">
-                    <i class="arrow"></i>
-                    <img src="img/zf_messageStudent.png" alt="hahh" class="pic">
-                     大家好！hahhahahahhahahahahhahahah
-                </li>
-                <li class="self">
-                    <i class="arrow"></i>
-                    <img src="img/zf_messageStudent.png" alt="hahh" class="pic">
-                     大家好！hahhahahahhahahahahhahahah
-                </li>
+                     好的。请开始你的表演！！
+                </li> 
             </ul>
             <div class="keyBoard">
                 <span></span>
@@ -105,9 +116,13 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <!--PAGE1-->
+                    
                     <div class="swiper-slide page1">
+                        <div id="back">
+                            <img src="./img/zh_back.png" class="back" alt="back"> 
+                        </div>
                         <dl>
-                            <dt>课程大纲</dt>
+                            <dt>专业技能</dt>
                             <dd>
                                 <em>01</em>
                                 <a href="#">HTML(5)+CSS(3)+移动端响应式布局开发及相关插件的使用</a>
@@ -142,7 +157,7 @@
                             </dd>
                             <dd>
                                 <em>09</em>
-                                <a href="#">VUE:VUE-CLI/VUE-ROUTER/VUEX/VUE ELEMENT等全家桶</a>
+                                <a href="#">了解SQL语法和MongDB，可以实现数据库增删改查操作</a>
                             </dd>
                             <dd>
                                 <em>10</em>
@@ -153,11 +168,17 @@
                                 <a href="#">辅助技能：NODE/WEBPACK/GIT等</a>
                             </dd>
                         </dl>
+                        <div id="tips">
+                            <img src="img/zh_tips.png" class="tips" alt="back"> 左右滑动，可进行切换呦！
+                        </div>
                     </div>
     
                     <!--PAGE2-->
                     <div class="swiper-slide page2">
-                        <h2>课程体系</h2>
+                        <div id="back">
+                            <img src="img/zh_back.png" class="back" alt="back"> 
+                        </div>
+                        <h2>教育背景</h2>
                         <img src="img/zf_course1.png" alt="">
                         <img src="img/zf_course2.png" alt="">
                         <img src="img/zf_course3.png" alt="">
@@ -165,11 +186,46 @@
                         <img src="img/zf_course5.png" alt="">
                         <img src="img/zf_course6.png" alt="">
                         <img src="img/zf_course.png" alt="">
+                        <div id="tips">
+                                <img src="img/zh_tips.png" class="tips" alt="back"> 左右滑动，可进行切换呦！
+                        </div>
                     </div>
-                    <div class="swiper-slide">3</div>
-                    <div class="swiper-slide">4</div>
-                    <div class="swiper-slide">5</div>
-                    <div class="swiper-slide">6</div>
+                    <!-- page3 -->
+                    <div class="swiper-slide">
+                            <div id="back">
+                                    <img src="./img/zh_back.png" class="back" alt="back"> 
+                            </div>
+                            <div id="tips">
+                                    <img src="img/zh_tips.png" class="tips" alt="back"> 左右滑动，可进行切换呦！
+                            </div>
+                    </div>
+                    <!-- page4 -->
+                    <div class="swiper-slide">
+                            <div id="back">
+                                    <img src="./img/zh_back.png" class="back" alt="back"> 
+                            </div>
+                            <div id="tips">
+                                    <img src="img/zh_tips.png" class="tips" alt="back"> 左右滑动，可进行切换呦！
+                            </div>
+                    </div>
+                    <!-- page5 -->
+                    <div class="swiper-slide">
+                            <div id="back">
+                                    <img src="./img/zh_back.png" class="back" alt="back"> 
+                            </div>
+                            <div id="tips">
+                                    <img src="img/zh_tips.png" class="tips" alt="tips"> 左右滑动，可进行切换呦！
+                            </div>
+                    </div>
+                    <!-- page6 -->
+                    <div class="swiper-slide">
+                            <div id="back">
+                                    <img src="./img/zh_back.png" class="back" alt="back"> 
+                            </div>
+                            <div id="tips">
+                                    <img src="img/zh_tips.png" class="tips" alt="tips"> 左右滑动，可进行切换呦！
+                            </div>
+                    </div>
                 </div>
             </div>
         </section>
