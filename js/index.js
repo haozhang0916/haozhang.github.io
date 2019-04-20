@@ -16,7 +16,7 @@
 let loadingRender=(function(){
     let $loadingBox=$('.loadingBox'),
         $current=$loadingBox.find('.current');
-    let imgData = ["img/icon.png", "img/zf_concatAddress.png", "img/zf_concatInfo.png", "img/zf_concatPhone.png", "img/zf_course.png", "img/zf_course1.png", "img/zf_course2.png", "img/zf_course3.png", "img/zf_course4.png", "img/zf_course5.png", "img/zf_course6.png", "img/zf_cube1.png", "img/zf_cube2.png", "img/zf_cube3.png", "img/zf_cube4.png", "img/zf_cube5.png", "img/zf_cube6.png", "img/zf_cubeBg.jpg", "img/zf_cubeTip.png", "img/zf_emploment.png", "img/zf_messageArrow1.png", "img/zf_messageArrow2.png", "img/zf_messageChat.png", "img/zf_messageKeyboard.png", "img/zf_messageLogo.png", "img/zf_messageStudent.png", "img/zf_outline.png", "img/zf_phoneBg.jpg", "img/zf_phoneDetail.png", "img/zf_phoneListen.png", "img/zf_phoneLogo.png", "img/zf_return.png", "img/zf_style1.jpg", "img/zf_style2.jpg", "img/zf_style3.jpg", "img/zf_styleTip1.png", "img/zf_styleTip2.png", "img/zf_teacher1.png", "img/zf_teacher2.png", "img/zf_teacher3.jpg", "img/zf_teacher4.png", "img/zf_teacher5.png", "img/zf_teacher6.png", "img/zf_teacherTip.png"];
+    let imgData = ["img/zh_ body.png","img/zh_baskateball.png","img/zh_cat.png","img/zh_course.png","img/zh_course1.png","img/zh_course2.png","img/zh_course3.png","img/zh_course4.png","img/zh_course5.png","img/zh_course6.png","img/zh_cube1.png","img/zh_cube2.png","img/zh_cube3.png","img/zh_cube4.png","img/zh_cube5.png","img/zh_cube6.png","img/zh_cubeBg.jpg","img/zh_cubeTip.png","img/zh_messageArrow1.png","img/zh_messageArrow2.png","img/zh_messageChat.png","img/zh_messageKeyboard.png","img/zh_messageLogo.png","img/zh_messageStudent.png","img/zh_outline.png","img/zh_phoneBg.jpg","img/zh_phoneDetail.png","img/zh_phoneListen.png","img/zh_phoneLogo.png","img/zh_projeck.png","img/zh_return.png","img/zh_selfInf.png","img/zh_selfPhone.png"];
     // run用来预加载图片
     let n=0;
     let imglength=imgData.length;
@@ -148,7 +148,7 @@ let messageRender=(function(){
     let step=-1;//记录当前信息的索引
     let total=$messageList.length+1;/*自己好要发一条*/
     let autoTimer=null;//计时器
-    let interval=2000;//记录信息出现的时间
+    let interval=3000;//记录信息出现的时间
     let tt=0;
     let showMessage=function showMessage(){
         ++step;
@@ -200,7 +200,7 @@ let messageRender=(function(){
         //=>把新创建的LI增加到页面中第二个LI的后面
         $(`<li class="self">
             <i class="arrow"></i>
-            <img src="img/zf_messageStudent.png" alt="" class="pic">
+            <img src="img/zh_messageStudent.png" alt="" class="pic">
             ${$textInp.html()}
         </li>`).insertAfter($messageList.eq(1)).addClass('active');
         $messageList = $wrapper.find('li');//=>重要:把新的LI放到页面中,我们此时应该重新获取LI，让MESSAGE-LIST和页面中的LI正对应，方便后期根据索引展示对应的LI
