@@ -381,9 +381,9 @@ let detailRender = (function () {
 
 
 /*在的项目中，如果页面中有滑动的需求，我们一定要把DOCUMENT本身滑动的默认行为阻止掉（不阻止：浏览器中预览，会触发下拉刷新或者左右滑动切换页卡等功能）*/
-// $(document).on('touchstart touchmove touchend', (ev) => {
-//     ev.preventDefault();
-// });
+$(document).on('touchstart touchmove touchend', (ev) => {
+    ev.preventDefault();
+});
 
 // =>开发过程中由于当前项目板块众多（每一个板块都是一个单例模式）,我们最好规划一种机制：通过标示的判断可以让程序只执行对应的板块内容，
 // 这样开发哪个板块，我们就把标示改为HASH,通过路由控制
