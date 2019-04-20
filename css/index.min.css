@@ -302,7 +302,7 @@ body {
 .phoneBox h2 img {
   display: inline-block;
   width: 2.62rem;
-  height: 1rem;
+  height: 0.8rem;
 }
 .phoneBox h2 span {
   display: none;
