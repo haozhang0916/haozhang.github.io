@@ -302,7 +302,7 @@ body {
 .phoneBox h2 img {
   display: inline-block;
   width: 2.62rem;
-  height: 0.8rem;
+  height: 0.8haorem;
 }
 .phoneBox h2 span {
   display: none;
@@ -659,17 +659,21 @@ body {
 .detailBox .page1 dl dd a {
   z-index: 1000;
 }
-.detailBox .page2 h2 {
-  margin-top: 0.4rem;
-  line-height: 0.9rem;
-  text-align: center;
-  font-size: 0.6rem;
-  font-weight: normal;
-  opacity: 0;
+.detailBox .page2 {
+  position: relative;
+}
+.detailBox .page2 .list {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  top: 50%;
+  left: 50%;
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
 }
 .detailBox .page2 .list img {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   margin: -0.5rem 0 0 -0.5rem;
   width: 1rem;
@@ -716,12 +720,18 @@ body {
   margin-top: -1.7rem;
   margin-left: -2.5rem;
 }
+.detailBox .page3 {
+  position: relative;
+}
 .detailBox .page3 img {
-  height: 9rem;
+  height: 7.3rem;
   width: 100%;
 }
+.detailBox .page4 {
+  position: relative;
+}
 .detailBox .page4 img {
-  height: 9rem;
+  height: 8.3rem;
   width: 100%;
 }
 .detailBox .page5 h2 {
@@ -733,9 +743,10 @@ body {
   opacity: 1;
 }
 .detailBox .page5 .hobby {
-  height: 9rem;
+  height: 6.5rem;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 .detailBox .page5 .hobby img {
   width: 5rem;
@@ -760,9 +771,15 @@ body {
   left: 17%;
   transform: skewY(9deg);
 }
+.detailBox .page6 {
+  position: relative;
+}
 .detailBox .page6 img {
-  height: 9rem;
+  height: 7.5rem;
   width: 100%;
+}
+* {
+  touch-action: pan-y;
 }
 @keyframes bounceInLeft {
   from,
